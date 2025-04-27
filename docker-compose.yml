@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  vereinshop:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./config:/config:ro     # <— Konfig-Volume
+      - ./orders:/orders
+    environment:
+      FLASK_SECRET: "random-secret-key"
+      SMTP_PASSWORD: "${SMTP_PASSWORD}"
+      PUSHOVER_TOKEN: "${PUSHOVER_TOKEN}"
+      PUSHOVER_USER:  "${PUSHOVER_USER}"
+      RECAPTCHA_SITE_KEY:   "${RECAPTCHA_SITE_KEY}"
+      RECAPTCHA_SECRET_KEY: "${RECAPTCHA_SECRET_KEY}"

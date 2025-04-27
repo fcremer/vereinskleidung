@@ -1,0 +1,78 @@
+###############################################################################
+#  Python ­/ Flask ­/ VS Code ­/ macOS ­/ Docker                              #
+###############################################################################
+
+# Byte-Code & Laufzeit­daten
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Test-Runs
+htmlcov/
+.coverage
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Virtuelle Umgebungen
+env/
+venv/
+.venv/
+ENV/
+.Python
+
+# macOS & Editor­krimskrams
+.DS_Store
+.idea/
+.vscode/
+*.sublime-*
+*.swp
+*.bak
+
+# Proj.-spezifische Build-/Runtime-Pfad
+orders/                  # Bestell-YAMLs – werden live erzeugt
+*.log
+*.pid
+dist/
+build/
+tmp/
+
+# Docker-Artefakte
+*.tar
+*.img
+*.container
+
+###############################################################################
+#  Konfigurationen mit Geheimnissen                                           #
+###############################################################################
+
+# Haupt-Config mit Passwörtern / Tokens / default items
+config/config.yml
+config/items.yml
+orders/pending.yml
+
+# Beispiel-Config bitte versionieren (siehe README)
+#   cp config/config.yml config/config.example.yml
+#   git add config/config.example.yml
+
+# Lokale .env-Dateien
+.env
+.env.*
+
+###############################################################################
+#  Sonstiges                                                                   #
+###############################################################################
+
+# Alle vom Nutzer generierten Dateien wie Berichte, Dumps …
+*.sqlite*
+*.db
+*.pkl
+*.csv
+*.xlsx

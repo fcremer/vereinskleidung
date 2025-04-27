@@ -1,0 +1,27 @@
+:root { --accent: #c00000; }
+
+/* Logo ------------------------------------------------------- */
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Überschrift (rot & kleiner) -------------------------------- */
+.headline {
+  color: var(--accent);
+  font-size: 1.75rem;   /* ~ H4-Größe */
+  font-weight: 600;
+}
+
+/* Buttons & Erfolgsmeldung ---------------------------------- */
+.btn-primary,
+.alert-success {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;                 /* weißer Text */
+}
+
+.btn-primary:hover { filter: brightness(1.1); }
+
+/* Formulare -------------------------------------------------- */
+.form-label { font-weight: 500; }
