@@ -207,7 +207,11 @@ def index() -> str:  # noqa: C901  (complexity OK für scope)
 
         order: dict[str, Any] = {
             "id": str(uuid.uuid4()),
-            "timestamp": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z",
+            "timestamp": (
+                datetime.datetime.now(datetime.timezone.utc)
+                .isoformat(timespec="seconds")
+                .replace("+00:00", "Z")
+            ),
             "buyer": request.form["name"],
             "articles": [],
         }
@@ -274,4 +278,4 @@ def overview() -> str:
 #  Debug-Start                                                               #
 # ---------------------------------------------------------------------------#
 if __name__ == "__main__":  # pragma: no cover
-    app.run(host="0.0.0.0", port=8001, debug=True)
+    app.run(host="0.0.0.0", port=8000, debug=False)

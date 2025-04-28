@@ -1,0 +1,6 @@
+# ----------------------------------------------------------
+# Development / CI tools
+# ----------------------------------------------------------
+flake8==7.*          # Stil- und Qualitäts­prüfung
+pytest==8.*          # Test-Runner
+pytest-cov==5.*      # Coverage-Bericht für CI
